@@ -1,0 +1,947 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CSV File &mdash; TM_Spec_Config 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SpecConfigBase_Func" href="SpecConfigBase_src/index.html" />
+    <link rel="prev" title="Program Structure" href="log.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> TM_Spec_Config
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../instruction.html">Instruction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Pro Structure</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#the-input-and-output">The Input and Output</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="log.html">Print out log</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CSV File</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#the-whole-framework">The whole Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#adminsection-framework">AdminSection Framework</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TM_Spec_Config</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Program Structure</a> &raquo;</li>
+        
+      <li>CSV File</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/structure/csv.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="csv-file">
+<h1>CSV File<a class="headerlink" href="#csv-file" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>TABLE=Test_Information
+Instance        StationType     Config  Test_Start_Time Test_Equipment  DriveSN Part_Num
+10010   HFT             ########        SM000   A04F630A        0TS1618
+TABLE=MPT_Software_Versions
+Instance        TP_Version      CIM_Version     Slate_Version   FPGA0_Version   FPGA1_Version   DIB_PartNumber
+10010   1.0.0.70451             N/A     N/A     G8003-66518
+TABLE=UA_Test_Block
+Instance        Test_Name       Result  Parameter       Test_Block_Start_Time   Test_Block_End_Time     Duration
+10010   Init Testing Flow       0       Serial Number=A04F630A;SKU=0TS1618;Station Type=63;Work Order=819354;Operation ID=11;LogLevel=3;FW_ATTR=CUSTFW;PSID=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA;UART LOG=0;        ########        ########        3.009
+TABLE=UA_Power_On
+Instance        LinkUp  LTSSM   LinkWidth       LinkSpeed       ActiveLanes     ValidLanes
+10020   1       16      4       8       15      15
+TABLE=UA_Test_Block
+Instance        Test_Name       Result  Parameter       Test_Block_Start_Time   Test_Block_End_Time     Duration
+10020   Power On        0       POV_12V_rail=12;POV_5V_3_3V_rail=3.3;PowerON_wait=10;Notify=1;Rescan=0;Max Retry=0;Delay_between_OffOn=5;time_to_ready_limit=15;Link Speed=3;   ########        ########        9.527
+TABLE=UA_LogPage_CAC
+Instance        Log_Page        Field_Name      Offset_in_bits  Field_Value
+200010  2       Critical Warning        0       0x00
+200010  2       Composite Temperature   8       0x0120
+200010  2       Available Spare 24      0x64
+200010  2       Available Spare Threshold       32      0x0A
+200010  2       Percentage Used 40      0x00
+200010  2       Data Units Read 256     0x00
+200010  2       Data Units Write        384     0x3AB6CC
+200010  2       Host Read Commands      512     0x00
+200010  2       Host Write Commands     640     0xE55F70
+200010  2       Controller Busy Time    768     0x0E
+200010  2       Power cycle     896     0x0130
+200010  2       Power On Hour   1024    0x06
+200010  2       Unsafe Shutdown 1152    0x67
+200010  2       Media Error     1280    0x00
+200010  2       Number Of Error Log     1408    0x88
+200010  2       Warning Comp Temperature Time   1536    0x00
+200010  2       Critical Comp Temperature Time  1568    0x00
+200010  2       Temperature Sensor 1    1600    0x0123
+200010  2       Temperature Sensor 2    1616    0x00
+200010  2       Temperature Sensor 3    1632    0x00
+200010  2       Temperature Sensor 4    1648    0x00
+200010  2       Temperature Sensor 5    1664    0x00
+200010  2       Temperature Sensor 6    1680    0x00
+200010  2       Temperature Sensor 7    1696    0x00
+200010  2       Temperature Sensor 8    1712    0x00
+TABLE=UA_LogPage_CAC
+Instance        Log_Page        Field_Name      Offset_in_bits  Field_Value
+200010  3       Active Firmware Info Active Slot        0       0x04
+200010  3       Active Firmware Info Reserved   3       0x00
+200010  3       Active Firmware Info Next Slot  4       0x04
+200010  3       Active Firmware Info Reserved   7       0x00
+200010  3       Active Firmware Info Reserved   8       0x00
+200010  3       Firmware Revision for Slots     64      0x3130303031313052313030303131305231303030313130523130303031313052
+TABLE=UA_LogPage_CAC
+Instance        Log_Page        Field_Name      Offset_in_bits  Field_Value
+200010  C0      Realloc Block Count     608     0x00
+200010  C0      Write Amplification     672     0x87
+200010  C0      Percent Life Remaning   704     0x64
+200010  C0      Program Fail Count      768     0x00
+200010  C0      Erase Fail Count        800     0x00
+200010  C0      Raw Read Error Rate     864     0x067A
+200010  C0      Customer  Eol Status    896     0x00
+200010  C0      Ifs Eol Status  912     0x00
+200010  C0      Customer Eol State      928     0x00
+200010  C0      Ifs Eol State   936     0x00
+TABLE=UA_LogPage_CAC
+Instance        Log_Page        Field_Name      Offset_in_bits  Field_Value
+200010  D0      Smart LogPage Header    0       0x00
+200010  D0      Life time Reallocated Erase Block Count 32      0x00
+200010  D0      Lifetime Power On Hours 64      0x00
+200010  D0      Lifetime UECC count     96      0x00
+200010  D0      Lifetime Write Amplification Factor     128     0x00
+200010  D0      Trailing Hour Write Amplification Factor        160     0x00
+200010  D0      Reserve Erase Block Count       192     0x00
+200010  D0      Lifetime Program Fail Count     224     0x00
+200010  D0      Lifetime Block Erase Fail Count 256     0x00
+200010  D0      Lifetime Die Failure Count      288     0x00
+200010  D0      Lifetime Link Rate Downgrade Count      320     0x00
+200010  D0      Lifetime Clean Shutdown Count On Power Loss     352     0x00
+200010  D0      Lifetime Unclean Shutdowns On Power Loss        384     0x00
+200010  D0      Currentt Temperature    416     0x00
+200010  D0      Max Recorded Temperature        448     0x00
+200010  D0      Lifetime Retired Block Count    480     0x00
+200010  D0      Lifetime Read Disturb Reallocation Events       512     0x00
+200010  D0      Lifetime NAND write Lpages      544     0x00
+200010  D0      Capacitor Health        608     0x00
+200010  D0      Lifetime User Write     640     0x8700000000
+200010  D0      Lifetime User Reads     704     0x64
+200010  D0      Lifetime Thermal Throttle Activation    768     0x00
+200010  D0      Percentage Of PEcycles Remaining        800     0x00
+TABLE=UA_Identify_Drive
+Instance        Field_Name      Offset_in_bits  Field_Value
+200010  ePPID (Dell Only)/XBSD (CalX)   24576   0x00
+200010  Norminal Form Factor (Dell only)        24832   0x00
+200010  Device Category (Dell only)     24848   0x00
+200010  GUID (Dell only)        24880   0x00
+200010  Security Feature Support        26232   0x00
+200010  ComponentID (Dell only) 25008   0x00
+200010  Dell Vendor Specific    24864   0x00
+200010  securityCopy0   25856   0x00
+200010  Vendor Specific (set to 0)      25888   0x00
+200010  securityCopy1   26624   0x00
+200010  Vendor Specific (set to 0)      26656   0x00
+200010  Lenovo PLP Identifier   32016   0x00
+200010  IPA Readiness After Boot        32032   0x00
+200010  Vendor Specific (set to 0)      32040   0x00
+200010  ePPID (Dell)/XBFI (CalX)        24608   0x00
+200010  ePPID (Dell)    24640   0x00
+200010  Active Power Scale (APS)        16566   0x00
+200010  Active Power Workload (APW)     16560   0x00
+200010  Active Power (ACTP)     16544   0x00
+200010  Idle Power Scale (IPS)  16534   0x00
+200010  Idle Power (IDLP)       16512   0x00
+200010  Relative Write Latency (RWL)    16504   0x00
+200010  Relative Write Throughout (RWT) 16496   0x00
+200010  Relative Read Latency (RRL)     16488   0x00
+200010  Relative Read Throughput (RRT)  16480   0x00
+200010  Exit Latency (EXLAT)+B7 16448   0x00
+200010  Entry Latency (ENLAT)   16416   0x00
+200010  Non-Operational State (NOPS)    16409   0x00
+200010  Max Power Scale (MPS)   16408   0x00
+200010  Maximum Power (MP)      16384   0x04B0
+200010  Active Power Scale (APS)        16822   0x00
+200010  Active Power Workload (APW)     16816   0x00
+200010  Active Power (ACTP)     16800   0x00
+200010  Idle Power Scale (IPS)  16790   0x00
+200010  Idle Power (IDLP)       16768   0x00
+200010  Relative Write Latency (RWL)    16760   0x00
+200010  Relative Write Throughout (RWT) 16752   0x00
+200010  Relative Read Latency (RRL)     16744   0x00
+200010  Relative Read Throughput (RRT)  16736   0x00
+200010  Exit Latency (EXLAT)+B7 16704   0x00
+200010  Entry Latency (ENLAT)   16672   0x00
+200010  Non-Operational State (NOPS)    16665   0x00
+200010  Max Power Scale (MPS)   16664   0x00
+200010  Maximum Power (MP)      16640   0x03E8
+200010  Active Power Scale (APS)        17078   0x00
+200010  Active Power Workload (APW)     17072   0x00
+200010  Active Power (ACTP)     17056   0x00
+200010  Idle Power Scale (IPS)  17046   0x00
+200010  Idle Power (IDLP)       17024   0x00
+200010  Relative Write Latency (RWL)    17016   0x00
+200010  Relative Write Throughout (RWT) 17008   0x00
+200010  Relative Read Latency (RRL)     17000   0x00
+200010  Relative Read Throughput (RRT)  16992   0x00
+200010  Exit Latency (EXLAT)+B7 16960   0x00
+200010  Entry Latency (ENLAT)   16928   0x00
+200010  Non-Operational State (NOPS)    16921   0x00
+200010  Max Power Scale (MPS)   16920   0x00
+200010  Maximum Power (MP)      16896   0x0320
+200010  Active Power Scale (APS)        17334   0x00
+200010  Active Power Workload (APW)     17328   0x00
+200010  Active Power (ACTP)     17312   0x00
+200010  Idle Power Scale (IPS)  17302   0x00
+200010  Idle Power (IDLP)       17280   0x00
+200010  Relative Write Latency (RWL)    17272   0x00
+200010  Relative Write Throughout (RWT) 17264   0x00
+200010  Relative Read Latency (RRL)     17256   0x00
+200010  Relative Read Throughput (RRT)  17248   0x00
+200010  Exit Latency (EXLAT)    17216   0x00
+200010  Entry Latency (ENLAT)   17184   0x00
+200010  Non-Operational State (NOPS)    17177   0x00
+200010  Max Power Scale (MPS)   17176   0x00
+200010  Maximum Power (MP)      17152   0x00
+200010  Active Power Scale (APS)        17590   0x00
+200010  Active Power Workload (APW)     17584   0x00
+200010  Active Power (ACTP)     17568   0x00
+200010  Idle Power Scale (IPS)  17558   0x00
+200010  Idle Power (IDLP)       17536   0x00
+200010  Relative Write Latency (RWL)    17528   0x00
+200010  Relative Write Throughout (RWT) 17520   0x00
+200010  Relative Read Latency (RRL)     17512   0x00
+200010  Relative Read Throughput (RRT)  17504   0x00
+200010  Exit Latency (EXLAT)+B7 17472   0x00
+200010  Entry Latency (ENLAT)   17440   0x00
+200010  Non-Operational State (NOPS)    17433   0x00
+200010  Max Power Scale (MPS)   17432   0x00
+200010  Maximum Power (MP)      17408   0x00
+200010  Active Power Scale (APS)        17846   0x00
+200010  Active Power Workload (APW)     17840   0x00
+200010  Active Power (ACTP)     17824   0x00
+200010  Idle Power Scale (IPS)  17814   0x00
+200010  Idle Power (IDLP)       17792   0x00
+200010  Relative Write Latency (RWL)    17784   0x00
+200010  Relative Write Throughout (RWT) 17776   0x00
+200010  Relative Read Latency (RRL)     17768   0x00
+200010  Relative Read Throughput (RRT)  17760   0x00
+200010  Exit Latency (EXLAT)+B7 17728   0x00
+200010  Entry Latency (ENLAT)   17696   0x00
+200010  Non-Operational State (NOPS)    17689   0x00
+200010  Max Power Scale (MPS)   17688   0x00
+200010  Maximum Power (MP)      17664   0x00
+200010  Active Power Scale (APS)        18102   0x00
+200010  Active Power Workload (APW)     18096   0x00
+200010  Active Power (ACTP)     18080   0x00
+200010  Idle Power Scale (IPS)  18070   0x00
+200010  Idle Power (IDLP)       18048   0x00
+200010  Relative Write Latency (RWL)    18040   0x00
+200010  Relative Write Throughout (RWT) 18032   0x00
+200010  Relative Read Latency (RRL)     18024   0x00
+200010  Relative Read Throughput (RRT)  18016   0x00
+200010  Exit Latency (EXLAT)+B7 17984   0x00
+200010  Entry Latency (ENLAT)   17952   0x00
+200010  Non-Operational State (NOPS)    17945   0x00
+200010  Max Power Scale (MPS)   17944   0x00
+200010  Maximum Power (MP)      17920   0x00
+200010  Active Power Scale (APS)        18358   0x00
+200010  Active Power Workload (APW)     18352   0x00
+200010  Active Power (ACTP)     18336   0x00
+200010  Idle Power Scale (IPS)  18326   0x00
+200010  Idle Power (IDLP)       18304   0x00
+200010  Relative Write Latency (RWL)    18296   0x00
+200010  Relative Write Throughout (RWT) 18288   0x00
+200010  Relative Read Latency (RRL)     18280   0x00
+200010  Relative Read Throughput (RRT)  18272   0x00
+200010  Exit Latency (EXLAT)+B7 18240   0x00
+200010  Entry Latency (ENLAT)   18208   0x00
+200010  Non-Operational State (NOPS)    18201   0x00
+200010  Max Power Scale (MPS)   18200   0x00
+200010  Maximum Power (MP)      18176   0x00
+200010  Active Power Scale (APS)        18614   0x00
+200010  Active Power Workload (APW)     18608   0x00
+200010  Active Power (ACTP)     18592   0x00
+200010  Idle Power Scale (IPS)  18582   0x00
+200010  Idle Power (IDLP)       18560   0x00
+200010  Relative Write Latency (RWL)    18552   0x00
+200010  Relative Write Throughout (RWT) 18544   0x00
+200010  Relative Read Latency (RRL)     18536   0x00
+200010  Relative Read Throughput (RRT)  18528   0x00
+200010  Exit Latency (EXLAT)+B7 18496   0x00
+200010  Entry Latency (ENLAT)   18464   0x00
+200010  Non-Operational State (NOPS)    18457   0x00
+200010  Max Power Scale (MPS)   18456   0x00
+200010  Maximum Power (MP)      18432   0x00
+200010  Maximum Submission Queue entry size     4100    0x06
+200010  Required Submission Queue entry size    4096    0x06
+200010  Maximum Completion Queue entry size     4108    0x04
+200010  Required Completion Queue entry size    4104    0x04
+200010  Maximum Outstanding Commands (MAXCMD)   4112    0x00
+200010  Number of Namespaces (NN)       4128    0x01
+200010  Timestamp feature supported     4166    0x01
+200010  Reservations supported  4165    0x00
+200010  Save/Get Field in the Set/Get Features Command supported        4164    0x01
+200010  Write Zero command supported    4163    0x01
+200010  Dataset Management command supported    4162    0x01
+200010  Write Uncorrectable command supported   4161    0x01
+200010  Compare command supported       4160    0x00
+200010  Verify command supported        4167    0x00
+200010  Compare and Write fused operation supported     4176    0x00
+200010  2   - Cryptographic erase is supported1  - Cryptographic erase and user data erase apply to all name    4192    0x00
+200010  Flush behavior  4201    0x00
+200010  Volatile Cache is present       4200    0x00
+200010  Atomic Write Unit Normal (AWUN) 4208    0x00
+200010  Atomic Write Unit Power Fail (AWUPF)    4224    0x00
+200010  All NVM Vendor Specific Commands use Standard Vendor Specifc command format     4240    0x01
+200010  Bit 0 if set to ?€?1?€? then the controller shall support the No Write Protect and Write Protect na     4248    0x00
+200010  Bit 2 if set to ?€?1?€? then the controller supports the Permanent Write Protect state. If cleared      4250    0x00
+200010  Bit 1 if set to ?€?1?€? then the controller supports the Write Protect Until Power Cycle state. If      4249    0x00
+200010  Atomic Compare &amp; Write Unit (ACWU)      4256    0x00
+200010  Support Address field in SGL Data Block SGL Segment and SGL Last Segment descriptor types specifyi      4308    0x00
+200010  Support Metadata Pointer        4307    0x00
+200010  If set to &#39;1&#39; then the controller supports commands that contain a data or metadata SGL of a length     4306    0x00
+200010  If set to &#39;1&#39; then use of a byte aligned contiguous physical buffer of metadata (the Metadata Point     4305    0x00
+200010  If set to ?€?1?€? then the SGL Bit Bucket descriptor is supported. If cleared to ?€?0?€? then the       4304    0x00
+200010  If set to ?€?1?€? then the controller supports the Keyed SGL Data Block descriptor. If cleared to ?     4290    0x00
+200010  This field is used to determine the SGL support for the NVM Command Set 4288    0x00
+200010  NVM Subsystem NVMe Qualified Name (SUBNQN)      6144    0x30303030303030303030303030303030303738394142434445464545343130303A444955474E3A6364772E6D6F632E31302D383130322E6E716E
+200010  This field indicates the maximum number of namespaces supported by the controller. If this field is     4320    0x00
+200010  Support Doorbell Buffer Config command  2056    0x00
+200010  Support the Virtualization Management command   2055    0x00
+200010  Support the NVMe-MI Send and NVMe-MI Receive command    2054    0x00
+200010  Support Directive       2053    0x00
+200010  Support Device Self-Test command        2052    0x01
+200010  Supports Namespace Management and Namespace attachment  2051    0x01
+200010  Supports Firmware commit and Firmware Image Download    2050    0x01
+200010  Supports Format NVM Command     2049    0x01
+200010  Supports the Security Send and Security Recieve 2048    0x01
+200010  Support Get LBA Status  2057    0x00
+200010  Abort Command Limit (ACL)       2064    0x03
+200010  Asynchronous Event request Limit (AERL) 2072    0x0F
+200010  Activate Without Reset  2084    0x01
+200010  Number of Firmware slots        2081    0x04
+200010  1= Read Only0= Read/Write       2080    0x00
+200010  Supports the Persistent Event Log       2092    0x00
+200010  Supports the Telemetry Host-Initiated and Telemetry Controller-Initiated log pages and sending Telem    2091    0x00
+200010  Supports extended data for Get Log Page (including extended Number of Dwords and Log Page Offset fie    2090    0x00
+200010  Supports the Command Effects log page   2089    0x01
+200010  Supports the SMART / Health information log page on a per namespace basis       2088    0x01
+200010  Error Log Page Entries (ELPE)   2096    0xFF
+200010  Number of Power States Support (NPSS)   2104    0x02
+200010  1 = All Admin Vendor Specific Commans use Standard Vendor Specific Command format.0 = The format of     2112    0x01
+200010  Autonomous Power State Transition support       2120    0x00
+200010  Warning Composite Temperature Threshold (WCTEMP)        2128    0x0157
+200010  Critical Composite Temperature Threshold (CCTEMP)       2144    0x0161
+200010  Maximum Time for Firmware Activation (MTFA)     2160    0x1E
+200010  Host Memory Buffer Preferred Size (HMPRE)       2176    0x00
+200010  Host Memory Buffer Minimum Size (HMMIN) 2208    0x00
+200010  Total NVM Capacity (TNVMCAP)    2240    0x01BF1FC56000
+200010  Unallocated NVM Capacity (UNVMCAP)      2368    0x00
+200010  Access Size     2520    0x00
+200010  Total Size      2512    0x00
+200010  Authentication Method   2499    0x00
+200010  Number of RPMB units    2496    0x00
+200010  Extended Device Self-test Time (EDSTT)  2528    0x01
+200010  Device Self-test Options (DSTO) 2544    0x01
+200010  Firmware Update Granularity (FWUG)      2552    0xFF
+200010  If this field is cleared to 0h then Keep Alive is not supported. Keep Alive shall be supported for N    2560    0x00
+200010  Host Controlled Thermal Management Support      2576    0x00
+200010  Minimum Thermal Management Temperature (MNTMT)  2592    0x00
+200010  Maximum Thermal Management Temperature (MXTMT)  2608    0x00
+200010  No-Deallocate Modifies Media After Sanitize (NODMMAS): This field indicates if media is additionally    2654    0x00
+200010  No-Deallocate Inhibited (NDI) If set to ?€?1?€? and the No-Deallocate Response Mode bit is set to ?€    2653    0x00
+200010  Overwrite sanitize operation support    2626    0x00
+200010  Block Erase sanitize operation support  2625    0x01
+200010  Crypto Erase sanitize operation support 2624    0x00
+200010  Host Memory Buffer Minimum Descriptor Entry Size (HMMINDS)      2656    0x00
+200010  Host Memory Maximum Descriptors Entries (HMMAXD)        2688    0x00
+200010  This field defines the maximum value of a valid NVM Set Identifier for any controller in the NVM sub    2704    0x00
+200010  This field defines the maximum value of a valid Endurance Group Identifier for any controller in the    2720    0x00
+200010  This field indicates the maximum amount of time in seconds for a transition between ANA states or       2736    0x00
+200010  To be defined for devices that support ANA      2744    0x00
+200010  This field indicates the maximum value of a valid ANA Group Identifier for any controller in the NVM    2752    0x00
+200010  This field indicates the number of ANA groups supported by this controller. If the controller suppor    2784    0x00
+200010  This field indicates the maximum reportable size for the Persistent Event Log (Refer to section 5.14    2816    0x00
+200010  PCI Vendor ID (VID)     0       0x1B96
+200010  PCI Subsystem Vendor ID (SSVID) 16      0x1B96
+200010  Serial Number (SN)      32      0x2020202020202020202020202020202020202041
+200010  Model Number (MN)       192     0x2020202020202020202020202020202020202020202020202020202020202020202020796D6D7544
+200010  Firmware Revision (FR   512     0x3130303031313052
+200010  Recommended Arbitration Burst (RAB)     576     0x04
+200010  IEEE OUI Identifier (IEEE)      584     0x14EE
+200010  1 = SR-IOV Virtual Function0 = PCI Function     610     0x00
+200010  1 = Two or more controllers0 = Single Controller        609     0x00
+200010  1 = Two or more physical PCIe Ports0 = Single PCIe      608     0x00
+200010  Maximum Data Transfer Size (MDTS)       616     0x00
+200010  Controller ID (CNTLID)  624     0x00
+200010  Version (VER)   640     0x010300
+200010  RTD3 Resume Latency (RTD3R)     672     0x00
+200010  RTD3 Entry Latency (RTD3E)      704     0x00
+200010  Controller send Firmware Activation Notices  Support    745     0x01
+200010  Controller send Namespace Attribute Notices Support     744     0x01
+200010  UUID List       777     0x00
+200010  Predictable Latency Mode        773     0x00
+200010  Endurance Groups        772     0x00
+200010  Read Recovery Levels    771     0x00
+200010  NVM Sets        770     0x00
+200010  Non-Operational Power State Permissive Mode- 1 = Controller supports host control of whether the con    769     0x00
+200010  128-bit Host Identifier Support 768     0x00
+200010  If Read Recovery Levels (RRL) are supported then this field shall be supported. If a bit is set to      800     0x00
+200010  Extension identifier assigned by the corresponding organization 984     0x7098BADCFE
+200010  24-bit Organizationally Unique Identifier (OUI) value assigned by the IEEE Registration Authority       960     0xEE1400
+200010  Vendor specific extension identifier assigned by the corresponding organization 896     0x00
+200010  NVM Subsystem contains a Management Endpoint on a PCIe port     2041    0x01
+200010  NVM Subsystem contains a Management Endpoint on an SMBus/I2C port       2040    0x01
+200010  Controller TypeMandatory in 1.4 and above       888     0x00
+200010  If the Do Not Retry (DNR) bit is cleared to ?€?0?€? in the CQE and the Command Retry Delay (CRD) fie    1024    0x00
+200010  If the DNR bit is cleared to ?€?0?€? in the CQE and the CRD field is set to 10b in the CQE then thi     1040    0x00
+200010  If the DNR bit is cleared to ?€?0?€? in the CQE and CRD field is set to 11b in the CQE then this va     1056    0x00
+TABLE=UA_Identify_Drive
+Instance        Field_Name      Offset_in_bits  Field_Value
+200010  Namespace Size (NSZE)   0       0x1BF1FC56
+200010  Namespace Capacity (NCAP)       64      0x1BF1FC56
+200010  Namespace Utilization (NUSE)    128     0x1BF1FC56
+200010  Set to &#39;1&#39; indicates that the non-zero NGUID and non-zero EUI64 fields for this namespace are never     195     0x00
+200010  et to &#39;1&#39; indicates that the controller supports the Deallocated or Unwritten Logical Block error fo    194     0x00
+200010  Set to &#39;1&#39; indicates that the fields NAWUN NAWUPF and NACWU are defined for this namespace and sho      193     0x01
+200010  Set to &#39;1&#39; indicates that the namespace supports thin provisioning.  Specifically the Namespace Cap     192     0x00
+200010  Number of LBA Formats (NLBAF)   200     0x01
+200010  Set to &#39;1&#39;- Metadata is transferred at the end of the data LBA creating an extended data LBAClear t     212     0x00
+200010  One of the 16 supported combinations indicated in this data structure   208     0x00
+200010  0 = Metadata being transferred as part of a separate buffer is supported        217     0x00
+200010  0 = Metadata being transferred as part of an extended data LBA is supported     216     0x00
+200010  1 = protection information transferred as the last 8 bytes of metadata is supported     228     0x00
+200010  1 = Protection information transferred as the first 8 bytes of metadata is supported    227     0x00
+200010  1 = Protection Information Type 3 is supported  226     0x00
+200010  1 = Protection Information Type 2 is supported  225     0x00
+200010  1 = Protection Information Type 1 is supported  224     0x00
+200010  1 = Protection information if enabled is transferred as the last 8 bytes of metadata    235     0x00
+200010  000b = Protection information is not enabled          001b = Protection information is ensbled Type     232     0x00
+200010  1 = NVM namespace is accessible byy two or more controllers / 0 = NVM namespace is a private namespa    240     0x00
+200010  1 = Exclusive Access - All Registrations reservation type is supported  254     0x00
+200010  1 = Write Exclusive - All Registrants reservation type us supported     253     0x00
+200010  1 = Exclusive Access - Registrations Only resvervation type is supported        252     0x00
+200010  1 = Write Exclusive - Registrants Only reservation type is supported    251     0x00
+200010  1 = Exclusive Access revervation type is supported      250     0x00
+200010  1 = Write Exclusive reservation type is supported       249     0x00
+200010  1 = Persist Through Power Loss Capability is supported  248     0x00
+200010  Format Progress Indicator (FPI) 256     0x80
+200010  Guard Field Protection Information      268     0x00
+200010  Controller supports the Deallocate bit in the Write Zeros command for this namespace.   267     0x00
+200010  Indicate the values read from a deallocated logical block and its metadata      264     0x00
+200010  Namespace Atomic Write Unit Normal (NAWUN)      272     0x00
+200010  Namespace Atomic Write Unit Power Fail (NAWUPF) 288     0x00
+200010  Namespace Atomic Compare &amp; Write Unit (NACWU)   304     0x00
+200010  Namespace Atomic Boundary Size Normal (NABSN)   320     0x00
+200010  Namespace Atomic Boundary Offset (NABO) 336     0x00
+200010  Namespace Atomic Boundary Size Power Fail (NABSPF)      352     0x00
+200010  Namespace Optimal IO Boundary (NOIOB)   368     0x00
+200010  NVM Capacity (NVMCAP)- In Hex raw numbers       384     0x01BF1FC56000
+200010  Namespace Globally Unique Identifier (NGUID)    832     0x7098BADCFEEE14000000000000000000
+200010  IEEE Extended Unique Identifier (EUI64) 960     0x7098BADCFEEE1400
+200010  This field indicates relative performance of the LBA format indicated relative to other LBA formats     1048    0x00
+200010  LBA Data Size (LBADS)   1040    0x0C
+200010  Metadata Size (MS)      1024    0x00
+200010  Relative Perfromance: This field indicates relative performance of the LBA format indicated relative    1080    0x00
+200010  LBA Data Size (LBADS)   1072    0x09
+200010  Metadata Size (MS)      1056    0x00
+200010  LBA Format 2 Support (LBAF2)    1088    0x00
+200010  LBA Format 3 Support (LBAF3)    1120    0x00
+200010  LBA Format 4 Support (LBAF4)    1152    0x00
+200010  LBA Format 5 Support (LBAF5)    1184    0x00
+200010  LBA Format 6 Support (LBAF6)    1216    0x00
+200010  LBA Format 7 Support (LBAF7)    1248    0x00
+200010  LBA Format 8 Support (LBAF8)    1280    0x00
+200010  LBA Format 9 Support (LBAF9)    1312    0x00
+200010  LBA Format 10 Support (LBAF10)  1344    0x00
+200010  LBA Format 11 Support (LBAF11)  1376    0x00
+200010  LBA Format 12 Support (LBAF12)  1408    0x00
+200010  LBA Format 13 Support (LBAF13)  1440    0x00
+200010  LBA Format 14 Support (LBAF14)  1472    0x00
+200010  LBA Format 15 Support (LBAF15)  1504    0x00
+200010  This range pf bytes are allocated for vendor specific usage     3072    0x00
+TABLE=UA_Identify_Drive
+Instance        Field_Name      Offset_in_bits  Field_Value
+200010  This field indicates the data type contained in the Namespace Identifier field as defined in the fol    0       0x01
+200010  This field contains the length in bytes of the Namespace Identifier field below. The total length of    16      0x00
+200010  This field contains a value that is globally unique and assigned to the namespace when the namespace    64      0x10027098BADC
+200010  This field indicates the data type contained in the Namespace Identifier field as defined in the fol    240     0x98
+200010  This field contains the length in bytes of the Namespace Identifier field below. The total length of    256     0x00
+200010  This field contains a value that is globally unique and assigned to the namespace when the namespace    304     0x00
+200010  This field indicates the data type contained in the Namespace Identifier field as defined in the fol    656     0x00
+200010  This field contains the length in bytes of the Namespace Identifier field below. The total length of    672     0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      1       0       Arbitration Burst       0x00
+200010  NA      1       0       zb Low Priority Weight  0x00
+200010  NA      1       0       zb Med Priority Weight  0x00
+200010  NA      1       0       zb High Priority Weight 0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      1       1       Arbitration Burst       0x00
+200010  NA      1       1       zb Low Priority Weight  0x00
+200010  NA      1       1       zb Med Priority Weight  0x00
+200010  NA      1       1       zb High Priority Weight 0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      1       2       Arbitration Burst       0x00
+200010  NA      1       2       zb Low Priority Weight  0x00
+200010  NA      1       2       zb Med Priority Weight  0x00
+200010  NA      1       2       zb High Priority Weight 0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      1       3       Saveable        0x01
+200010  NA      1       3       Namespace Specific      0x00
+200010  NA      1       3       Changeable      0x01
+200010  NA      1       3       Reserved 1      0x00
+200010  NA      1       3       Reserved 2      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      4       0       Temp Threshold in K     0x0157
+200010  NA      4       0       Threshold Sensor Select 0x00
+200010  NA      4       0       Threshold Type Select   0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      4       1       Temp Threshold in K     0x0157
+200010  NA      4       1       Threshold Sensor Select 0x00
+200010  NA      4       1       Threshold Type Select   0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      4       2       Temp Threshold in K     0x0157
+200010  NA      4       2       Threshold Sensor Select 0x00
+200010  NA      4       2       Threshold Type Select   0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      4       3       Saveable        0x01
+200010  NA      4       3       Namespace specific      0x00
+200010  NA      4       3       Changeable      0x01
+200010  NA      4       3       Reserved 1      0x00
+200010  NA      4       3       Reserved 2      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      7       0       Zb Number IO Submission Qs      0x7F
+200010  NA      7       0       zb Number Io Completion Qs      0x7F
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      7       1       Zb Number IO Submission Qs      0x7F
+200010  NA      7       1       zb Number Io Completion Qs      0x7F
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      7       2       Zb Number IO Submission Qs      0x7F
+200010  NA      7       2       zb Number Io Completion Qs      0x7F
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      7       3       Saveable        0x01
+200010  NA      7       3       Namespace Specific      0x00
+200010  NA      7       3       changeable      0x01
+200010  NA      7       3       Reserved 1      0x00
+200010  NA      7       3       reserved 2      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      8       0       zb Agg Threshold        0x00
+200010  NA      8       0       Agg Time in 100ms       0x00
+200010  NA      8       0       reserved        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      8       1       zb Agg Threshold        0x00
+200010  NA      8       1       Agg Time in 100ms       0x00
+200010  NA      8       1       reserved        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      8       2       zb Agg Threshold        0x00
+200010  NA      8       2       Agg Time in 100ms       0x00
+200010  NA      8       2       reserved        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      8       3       Saveable        0x01
+200010  NA      8       3       Namespace Specific      0x00
+200010  NA      8       3       Changeable      0x01
+200010  NA      8       3       Reserved 1      0x00
+200010  NA      8       3       reserved 2      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      9       0       interrupt Vector        0x00
+200010  NA      9       0       coalescing Disable      0x01
+200010  NA      9       0       reserved        0x01
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      9       1       interrupt Vector        0x00
+200010  NA      9       1       coalescing Disable      0x01
+200010  NA      9       1       reserved        0x01
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      9       2       interrupt Vector        0x00
+200010  NA      9       2       coalescing Disable      0x01
+200010  NA      9       2       reserved        0x01
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      9       3       Saveable        0x01
+200010  NA      9       3       Namespace Specific      0x00
+200010  NA      9       3       Changeable      0x01
+200010  NA      9       3       reserved        0x00
+200010  NA      9       3       Reserved 1      0x00
+200010  NA      9       3       Reserved 2      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0A      0       Disable Normal  0x01
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0A      1       Disable Normal  0x01
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0A      2       Disable Normal  0x01
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0A      3       Saveable        0x01
+200010  NA      0A      3       Namespace Specific      0x00
+200010  NA      0A      3       Changeable      0x01
+200010  NA      0A      3       reserved        0x00
+200010  NA      0A      3       Reserved 1      0x00
+200010  NA      0A      3       reserved 2      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0B      0       Crit Warn Available Spare       0x00
+200010  NA      0B      0       crit Warn Temp Threshold        0x00
+200010  NA      0B      0       crit Warn Sub Sys Reliability   0x00
+200010  NA      0B      0       crit Warn Read only     0x00
+200010  NA      0B      0       crit Warn Volatible Mem Backup  0x00
+200010  NA      0B      0       reserved        0x00
+200010  NA      0B      0       Namespace Attr Notice   0x00
+200010  NA      0B      0       Fw Activation Notice    0x00
+200010  NA      0B      0       Telemetry Log Notice    0x00
+200010  NA      0B      0       reserved Bits   0x00
+200010  NA      0B      0       reserved        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0B      1       Crit Warn Available Spare       0x00
+200010  NA      0B      1       crit Warn Temp Threshold        0x00
+200010  NA      0B      1       crit Warn Sub Sys Reliability   0x00
+200010  NA      0B      1       crit Warn Read only     0x00
+200010  NA      0B      1       crit Warn Volatible Mem Backup  0x00
+200010  NA      0B      1       reserved        0x00
+200010  NA      0B      1       Namespace Attr Notice   0x00
+200010  NA      0B      1       Fw Activation Notice    0x00
+200010  NA      0B      1       Telemetry Log Notice    0x00
+200010  NA      0B      1       reserved Bits   0x00
+200010  NA      0B      1       reserved        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0B      2       Crit Warn Available Spare       0x00
+200010  NA      0B      2       crit Warn Temp Threshold        0x00
+200010  NA      0B      2       crit Warn Sub Sys Reliability   0x00
+200010  NA      0B      2       crit Warn Read only     0x00
+200010  NA      0B      2       crit Warn Volatible Mem Backup  0x00
+200010  NA      0B      2       reserved        0x00
+200010  NA      0B      2       Namespace Attr Notice   0x00
+200010  NA      0B      2       Fw Activation Notice    0x00
+200010  NA      0B      2       Telemetry Log Notice    0x00
+200010  NA      0B      2       reserved Bits   0x00
+200010  NA      0B      2       reserved        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0B      3       Saveable        0x01
+200010  NA      0B      3       namespace Specific      0x00
+200010  NA      0B      3       changeable      0x01
+200010  NA      0B      3       reserved 1      0x00
+200010  NA      0B      3       Reserved 2      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0       0       Workload Hint   0x00
+200010  NA      0       0       Power State     0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0       1       Workload Hint   0x00
+200010  NA      0       1       Power State     0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0       2       Workload Hint   0x00
+200010  NA      0       2       Power State     0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0       3       Saveable        0x00
+200010  NA      0       3       Namespace specific      0x00
+200010  NA      0       3       Changeable      0x00
+200010  NA      0       3       Reserved 1      0x00
+200010  NA      0       3       Reserved 2      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0E      0       timestamp       0x1324
+200010  NA      0E      0       synch   0x00
+200010  NA      0E      0       timestamp origin        0x00
+200010  NA      0E      0       reserved        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0E      1       timestamp       0x00
+200010  NA      0E      1       synch   0x00
+200010  NA      0E      1       timestamp origin        0x00
+200010  NA      0E      1       reserved        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0E      2       timestamp       0x00
+200010  NA      0E      2       synch   0x00
+200010  NA      0E      2       timestamp origin        0x00
+200010  NA      0E      2       reserved        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      0E      3       Saveable        0x00
+200010  NA      0E      3       namespace specific      0x00
+200010  NA      0E      3       changeable      0x00
+200010  NA      0E      3       reserved 1      0x00
+200010  NA      0E      3       reserved 2      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      80      0       preboot Software Load Count     0x00
+200010  NA      80      0       reserved byte   0x00
+200010  NA      80      0       rserved 0x00
+200010  NA      80      0       enable Ext Host ID      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      80      1       preboot Software Load Count     0x00
+200010  NA      80      1       reserved byte   0x00
+200010  NA      80      1       rserved 0x00
+200010  NA      80      1       enable Ext Host ID      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      80      2       preboot Software Load Count     0x00
+200010  NA      80      2       reserved byte   0x00
+200010  NA      80      2       rserved 0x00
+200010  NA      80      2       enable Ext Host ID      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      80      3       saveable        0x01
+200010  NA      80      3       namespace specific      0x00
+200010  NA      80      3       changeable      0x01
+200010  NA      80      3       reserved        0x00
+200010  NA      80      3       reserved 1      0x00
+200010  NA      80      3       reserved 2      0x00
+200010  NA      80      3       saveable        0x01
+200010  NA      80      3       Namespace Specific      0x00
+200010  NA      80      3       changeable      0x01
+200010  NA      80      3       reserved 2      0x00
+200010  NA      80      3       reserved 1      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      C3      0       Cmd To Limit    0x28
+200010  NA      C3      0       cmd To Behaviour        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      C3      1       Cmd To Limit    0x28
+200010  NA      C3      1       cmd To Behaviour        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      C3      2       Cmd To Limit    0x28
+200010  NA      C3      2       cmd To Behaviour        0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      C3      3       reserved 2      0x00
+200010  NA      C3      3       reserved 1      0x00
+200010  NA      C3      3       saveable        0x00
+200010  NA      C3      3       reserved        0x00
+200010  NA      C3      3       changeable      0x01
+200010  NA      C3      3       namespace specific      0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      CF      0       led Status      0x00
+200010  NA      CF      0       enable Led Beacon       0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      CF      1       led Status      0x00
+200010  NA      CF      1       enable Led Beacon       0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      CF      2       led Status      0x00
+200010  NA      CF      2       enable Led Beacon       0x00
+TABLE=UA_NVME_Set_Get_Features
+Instance        Namespace       ID      SubID   Name    Value
+200010  NA      CF      3       reserved 2      0x00
+200010  NA      CF      3       Saveable        0x01
+200010  NA      CF      3       Namespace specific      0x00
+200010  NA      CF      3       reserved 1      0x00
+200010  NA      CF      3       reserved        0x00
+200010  NA      CF      3       changeable      0x01
+TABLE=UA_LogPage_CAC
+Instance        Log_Page        Field_Name      Offset_in_bits  Field_Value
+200010  0x3E    write_hlba_mismatch_count       13888   0x00
+200010  0x3E    bit_errors_ddr_single   18432   0x00
+200010  0x3E    bit_errors_ddr_double   18464   0x00
+TABLE=UA_Test_Block
+Instance        Test_Name       Result  Parameter       Test_Block_Start_Time   Test_Block_End_Time     Duration
+200010  Spec Config     0       Customer=AWS;Security=SED;Capacity=512GB;Form Factor=M.2;JsonFolder=OOBAspen+;  ########        ########        0.131
+1980010 Power Off       0       Graceful=1;PowerOFF_wait=0;     ########        ########        3.121
+TABLE=Test_Result
+Instance        EndTime FailureState    Fail_Code       Fail_Message    Fail_Command
+1990010 ########        N/A     32889001        Finish Start-General Error      Finish Start
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="SpecConfigBase_src/index.html" class="btn btn-neutral float-right" title="SpecConfigBase_Func" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="log.html" class="btn btn-neutral float-left" title="Program Structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Owen Jiang
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

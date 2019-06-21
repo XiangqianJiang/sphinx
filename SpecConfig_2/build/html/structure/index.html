@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Program Structure &mdash; TM_Spec_Config 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Program Structure" href="log.html" />
+    <link rel="prev" title="Spec Configure Project Instruction" href="../instruction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> TM_Spec_Config
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../instruction.html">Instruction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pro Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-input-and-output">The Input and Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="log.html">Print out log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="csv.html">CSV File</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-whole-program-framework">The whole Program Framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adminsection-framework">AdminSection Framework</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SpecConfigBase_src/index.html">About Class SpecConfigBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Section_src/index.html">About Class Section</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TM_Spec_Config</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Program Structure</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/structure/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-structure">
+<h1>Program Structure<a class="headerlink" href="#program-structure" title="Permalink to this headline">¶</a></h1>
+<p>The source files for the test program are organized into a component hierarchy.</p>
+<div class="section" id="the-input-and-output">
+<h2>The Input and Output<a class="headerlink" href="#the-input-and-output" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Input</dt>
+<dd class="field-odd"><p>Json File</p>
+</dd>
+</dl>
+<ol class="arabic simple">
+<li><p>configspec_NVMeCommandSetSpecific</p></li>
+<li><p>…</p></li>
+<li><p>onfigspec_GET_FEATURES</p></li>
+<li><p>configspec_GET LOG PAG</p></li>
+<li><p>…</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Output</dt>
+<dd class="field-odd"><p>print out and CSV File</p>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="log.html">Print out log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csv.html">CSV File</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="the-whole-program-framework">
+<h2>The whole Program Framework<a class="headerlink" href="#the-whole-program-framework" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> #. class SpecConfigBase for all spec config
+ #. class Section and AminSection for Admin only
+
+┌───────+───&lt;Start&gt; - class TmSpecConfig : public TMBase
+├
+├───────+───&lt;Father Class&gt; - class SpecConfigBase
+├       ├─ class AdminCategory        : public SpecConfigBase   ==&gt; m_cmds
+├       ├─ class TDD_LogPage3E        : public SpecConfigBase
+├       ├─ class NvmeRegSpecConfig    : public SpecConfigBase
+├       └─ class PcieSpecConfig       : public SpecConfigBase
+├
+└──────────+───&lt;Father Class 1&gt; - class Section.
+           │───&lt;Father Class 2&gt; - class AdminSection: public Section ==&gt; use m_cmds
+           │                                                         friend class AdminCategory
+           ├─ class AdminIdentifySection       : public AdminSection ==&gt; fill m_cmds
+           ├─ class AdminGetFeatureSection     : public AdminSection ==&gt; fill m_cmds
+           └─ class AdminGetLogPageSection     : public AdminSection ==&gt; fill m_cmds
+</pre></div>
+</div>
+</div>
+<div class="section" id="adminsection-framework">
+<h2>AdminSection Framework<a class="headerlink" href="#adminsection-framework" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>map_cmd</dt><dd><ul>
+<li><p>64 byte Nvme cmd</p></li>
+<li><p>Attribute</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Attribute</dt><dd><ul>
+<li><p>std::string jsonName;</p></li>
+<li><p>std::string name;</p></li>
+<li><p>uint32_t offset;</p></li>
+<li><p>uint32_t length;</p></li>
+<li><p>std::string actualValue;</p></li>
+<li><p>std::string expectValue;</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We start from <strong>int TmSpecConfig::Execute()</strong> where the <code class="docutils literal notranslate"><span class="pre">AdminSection</span></code> and <code class="docutils literal notranslate"><span class="pre">TDD_LogPage3E</span></code> obj will be created.
+Then we execute <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">AdminCategory::Execute()</span></code> and <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">TDD_LogPage3E::Execute()</span></code>.</p>
+<p>In the <strong>AdminCategory::Execute()</strong>
+the <code class="docutils literal notranslate"><span class="pre">AdminIdentifySection</span></code> <code class="docutils literal notranslate"><span class="pre">AdminGetLogPageSection</span></code> and <code class="docutils literal notranslate"><span class="pre">AdminGetFeatureSection</span></code> obj will be created.
+We will load the json file and prepare the cmd setting and attribute for the <strong>&lt;m_cmds&gt;</strong> which is the member from the AdminSection.
+Once <strong>&lt;m_cmds&gt;</strong> map is done, we will loop it and do the flow of  <code class="docutils literal notranslate"><span class="pre">SendCommand()</span></code> , <code class="docutils literal notranslate"><span class="pre">ExtractAttribute()</span></code> , <code class="docutils literal notranslate"><span class="pre">DecodeAttributes</span></code>
+<code class="docutils literal notranslate"><span class="pre">ScreenAttributes</span></code> and  <code class="docutils literal notranslate"><span class="pre">WriteCsV</span></code> .</p>
+<p>In the <strong>TDD_LogPage3E::Execute()</strong>
+We just run the flow of <code class="docutils literal notranslate"><span class="pre">SendTDDcmd()</span></code> , <code class="docutils literal notranslate"><span class="pre">InitAttributes</span></code> , <code class="docutils literal notranslate"><span class="pre">ExtractAttribute()</span></code> , <code class="docutils literal notranslate"><span class="pre">DecodeAttributes</span></code>
+<code class="docutils literal notranslate"><span class="pre">ScreenAttributes</span></code> and  <code class="docutils literal notranslate"><span class="pre">WriteCsV</span></code> .</p>
+</div>
+<p><strong>Contents:</strong></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SpecConfigBase_src/index.html">About Class SpecConfigBase</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SpecConfigBase_src/ClassSpecConfig_src/index.html">SpecConfigBase_Func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpecConfigBase_src/ClassAdminCategory_src/index.html">AdminCategory_Func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpecConfigBase_src/ClassTDDLogPage3E_src/index.html">TDD_LogPage3E_Func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpecConfigBase_src/ClassNvmeReg_src/index.html">NvmeRegSpecConfig_Func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SpecConfigBase_src/ClassPcie_src/index.html">ClassPcieSpecconfig_Func</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Section_src/index.html">About Class Section</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Section_src/ClassSection_src/index.html">Section_Func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Section_src/ClassAdminSection_src/index.html">AdminSection_Func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Section_src/ClassAdminIdentifySection_src/index.html">AdminIdentifySection_Func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Section_src/ClassAdminGetFeatureSection_src/index.html">AdminGetFeatureSection_Func</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Section_src/ClassAdminGetLogPageSection_src/index.html">AdminGetLogPageSection_Func</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="log.html" class="btn btn-neutral float-right" title="Program Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../instruction.html" class="btn btn-neutral float-left" title="Spec Configure Project Instruction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Owen Jiang
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
